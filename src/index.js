@@ -6,14 +6,15 @@ const DEFAULT = {
 
 function getReducer(states) {
   return function reducer(current, input) {
-    const { on } = states[current] ?? DEFAULT.OBJECT;
+    const { on } = states[current] == null ? DEFAULT.OBJECT : states[current];
 
     if (on == null) {
       console.error(`${current} does not have any transition for ${input}.`);
+      return current;
     }
 
     // we keep in the current as fallback
-    const newCurrent = on?.[input] || current;
+    const newCurrent = on[input] == null ? current : on[input];
 
     console.debug('[use-automaton]', 'transition', current, `→ (${input}) →`, 'to', on?.[input]);
 
