@@ -16,7 +16,7 @@ function getReducer(states) {
     // we keep in the current as fallback
     const newCurrent = on[input] == null ? current : on[input];
 
-    console.debug('[use-automaton]', 'transition', current, `→ (${input}) →`, 'to', on?.[input]);
+    console.debug('[use-automaton]', 'transition', current, `→ (${input}) →`, 'to', on[input]);
 
     return newCurrent;
   };
