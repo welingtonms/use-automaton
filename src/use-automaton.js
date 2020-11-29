@@ -32,7 +32,7 @@ function getReducer(states) {
  * @param {(string|number)} initialCurrent - State from where to start automaton.
  */
 function useAutomaton(
-  states = mandatory('states is a required parameter'),
+  states = mandatory('I think you forgot to provide the states for your automaton'),
   initialCurrent = mandatory('hmm, I think you forgot the initial state, huh?!')
 ) {
   const [current, dispatch] = React.useReducer(

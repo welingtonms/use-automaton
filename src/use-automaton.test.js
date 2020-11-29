@@ -63,4 +63,12 @@ describe('useAutomaton', () => {
 
     expect(result.current.current).toBe('dead-end');
   });
+
+  it('throws an error when `states` parameter is not provided', () => {
+    expect(() => useAutomaton()).toThrowError('I think you forgot to provide the states for your automaton');
+  });
+
+  it('throws an error when `initialCurrent` parameter is not provided', () => {
+    expect(() => useAutomaton(STATES)).toThrowError('hmm, I think you forgot the initial state, huh?!');
+  });
 });

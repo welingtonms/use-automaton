@@ -1,5 +1,7 @@
 # @cheesebit/use-automaton
 
+[![Coverage Status](https://coveralls.io/repos/github/cheesebit/use-automaton/badge.svg?branch=master)](https://coveralls.io/github/cheesebit/use-automaton?branch=master)
+
 React hook that implements the basic mechanism of an automaton. It can be used to implement a more generic reducer-like logic.
 
 Whenever you have a number of states whose transition from one to another are based on specific tokens, just like our know friend [automaton](https://en.wikipedia.org/wiki/Automaton), that's where this hook comes in handy.
