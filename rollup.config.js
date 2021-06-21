@@ -9,15 +9,7 @@ import resolve from '@rollup/plugin-node-resolve';
 module.exports = [
   {
     input: 'src/index.js',
-    output: [
-      {
-        name: 'use-automaton',
-        file: pkg.browser,
-        format: 'umd',
-      },
-      { name: 'use-automaton', file: pkg.main, format: 'cjs' },
-      { name: 'use-automaton', file: pkg.module, format: 'es' },
-    ],
+    output: [{ name: 'use-automaton', file: pkg.module, format: 'es' }],
     plugins: [
       del({ targets: [`dist/`] }),
       babel({
@@ -29,7 +21,7 @@ module.exports = [
       analyze({
         hideDeps: true,
         summaryOnly: true,
-        filter: module => /^\/src/.test(module.id),
+        filter: (module) => /^\/src/.test(module.id),
       }),
     ],
     external: ['react'],

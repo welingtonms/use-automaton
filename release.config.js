@@ -1,10 +1,20 @@
 module.exports = {
-  release: {
-    branches: ['master', 'release'],
-  },
-
+  branches: 'master',
   plugins: [
-    '@semantic-release/commit-analyzer',
+    [
+      '@semantic-release/commit-analyzer',
+      {
+        preset: 'angular',
+        releaseRules: [
+          { type: 'refactor', release: 'patch' },
+          { type: 'style', release: 'patch' },
+          { type: 'release', release: 'patch' },
+        ],
+        parserOpts: {
+          noteKeywords: ['BREAKING CHANGE', 'BREAKING CHANGES'],
+        },
+      },
+    ],
     '@semantic-release/release-notes-generator',
     [
       '@semantic-release/changelog',
@@ -12,14 +22,24 @@ module.exports = {
         changelogFile: 'CHANGELOG.md',
       },
     ],
-    '@semantic-release/npm',
+    [
+      '@semantic-release/npm',
+      {
+        npmPublish: true,
+      },
+    ],
+    [
+      '@semantic-release/github',
+      {
+        assets: 'dist/**/*.{js,map}',
+      },
+    ],
     [
       '@semantic-release/git',
       {
-        assets: ['docs', 'package.json'],
-        message:
-          'chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}',
+        assets: ['dist/**/*.{js,map}', 'package.json', 'CHANGELOG.md'],
+        message: 'chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}',
       },
     ],
   ],
-};
+}
