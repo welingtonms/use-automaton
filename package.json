@@ -14,7 +14,8 @@
     "build": "rollup -c && npm run generate-types",
     "postversion": "git push origin --tags",
     "prepublishOnly": "npm run build",
-    "generate-types": "tsc --build tsconfig.json"
+    "generate-types": "tsc --build tsconfig.json",
+    "release": "semantic-release"
   },
   "repository": {
     "type": "git",
