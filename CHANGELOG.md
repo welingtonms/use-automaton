@@ -1,3 +1,10 @@
+## [0.2.1](https://github.com/cheesebit/use-automaton/compare/v0.2.0...v0.2.1) (2021-06-21)
+
+
+### Bug Fixes
+
+* fix peer dep version ([e513a0c](https://github.com/cheesebit/use-automaton/commit/e513a0c953ab129776cd0055b68643acd527d3d1))
+
 # [0.2.0](https://github.com/cheesebit/use-automaton/compare/v0.1.0...v0.2.0) (2021-06-21)
 
 
