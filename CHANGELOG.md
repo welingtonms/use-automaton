@@ -1,3 +1,10 @@
+## [0.2.2](https://github.com/cheesebit/use-automaton/compare/v0.2.1...v0.2.2) (2021-06-26)
+
+
+### Bug Fixes
+
+* fix bundle output ([78a31dc](https://github.com/cheesebit/use-automaton/commit/78a31dc76f2f4066098d7cb70692440583ef8c51))
+
 ## [0.2.1](https://github.com/cheesebit/use-automaton/compare/v0.2.0...v0.2.1) (2021-06-21)
 
 
