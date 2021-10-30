@@ -1,3 +1,20 @@
+# [0.3.0](https://github.com/cheesebit/use-automaton/compare/v0.2.2...v0.3.0) (2021-10-30)
+
+
+### Bug Fixes
+
+*  add breaking change release rule ([e8d6e1a](https://github.com/cheesebit/use-automaton/commit/e8d6e1adaaa77e680fe6371c4e3408d5a4e659a2))
+* add semantic-release changelog dep ([3f734fc](https://github.com/cheesebit/use-automaton/commit/3f734fc6437e559d8dc34e6e8387d6c4321346cb))
+* add semantic-release git dep ([2db25b2](https://github.com/cheesebit/use-automaton/commit/2db25b2e428e443b23051200de53ffa67d257d7f))
+* remove 'watch' from test script ([2d5f279](https://github.com/cheesebit/use-automaton/commit/2d5f2790a2f783529fc583f6419004e377402dfc))
+* upgrade CI node version ([ec59a17](https://github.com/cheesebit/use-automaton/commit/ec59a1706f745ea14bfc3b89f1f6c7fa17ac9d3e))
+
+
+### Features
+
+* convert js code to ts ([be730b2](https://github.com/cheesebit/use-automaton/commit/be730b249a9f166aa40dc0c72c425af487b22140))
+* setup typescript ([bd2fa8a](https://github.com/cheesebit/use-automaton/commit/bd2fa8a4ff518632c1c2a999acb01dfc9a963d01))
+
 ## [0.2.2](https://github.com/cheesebit/use-automaton/compare/v0.2.1...v0.2.2) (2021-06-26)
 
 

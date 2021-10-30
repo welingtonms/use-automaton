@@ -1,6 +1,6 @@
 {
   "name": "@cheesebit/use-automaton",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "React hook that implements the basic mechanism of an automaton.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
