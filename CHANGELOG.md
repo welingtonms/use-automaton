@@ -1,3 +1,10 @@
+## [0.3.1](https://github.com/cheesebit/use-automaton/compare/v0.3.0...v0.3.1) (2021-10-30)
+
+
+### Bug Fixes
+
+* add tslib dep ([462f736](https://github.com/cheesebit/use-automaton/commit/462f736760c111f2cfbe588aca96f4fcd0b46236))
+
 # [0.3.0](https://github.com/cheesebit/use-automaton/compare/v0.2.2...v0.3.0) (2021-10-30)
 
 
