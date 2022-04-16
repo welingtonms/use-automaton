@@ -1,4 +1,4 @@
-# @cheesebit/use-automaton
+# use-automaton
 
 [![Coverage Status](https://coveralls.io/repos/github/cheesebit/use-automaton/badge.svg?branch=master)](https://coveralls.io/github/cheesebit/use-automaton?branch=master)
 
