@@ -1,6 +1,6 @@
 # use-automaton
 
-[![Coverage Status](https://coveralls.io/repos/github/cheesebit/use-automaton/badge.svg?branch=master)](https://coveralls.io/github/cheesebit/use-automaton?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/welingtonms/use-automaton/badge.svg?branch=master)](https://coveralls.io/github/welingtonms/use-automaton?branch=master)
 
 React hook that implements the basic mechanism of an automaton. It can be used to implement a more generic reducer-like logic.
 
@@ -8,7 +8,7 @@ Whenever you have a number of states whose transition from one to another are ba
 
 ## Instalation
 
-You can add this hook as a dependency by running `npm install @cheesebit/use-automaton` or `yarn add @cheesebit/use-automaton`.
+You can add this hook as a dependency by running `npm install @welingtonms/use-automaton` or `yarn add @welingtonms/use-automaton`.
 
 ## Props
 
@@ -20,15 +20,15 @@ Your `states` prop, should look something like this.
 
 ```js
 const states = {
-  // 'state-1' is the state identifier
-  'state-1': {
-    // here we defined the transitions we allow for this step
-    on: {
-      // when transition receives 'some-token', automaton will transition to 'state-2'
-      'some-token': 'state-2',
-    },
-  },
-  // you can have as many states you wish
+	// 'state-1' is the state identifier
+	'state-1': {
+		// here we defined the transitions we allow for this step
+		on: {
+			// when transition receives 'some-token', automaton will transition to 'state-2'
+			'some-token': 'state-2',
+		},
+	},
+	// you can have as many states you wish
 };
 ```
 
@@ -42,62 +42,62 @@ Initial state from where we will start this automaton.
 
 ```jsx
 export default function App() {
-  const states = {
-    'state-1': {
-      on: {
-        'token-a': 'state-2',
-        'token-b': 'state-3',
-      },
-    },
-    'state-2': {
-      on: {
-        'token-c': 'state-3',
-      },
-    },
-    'state-3': {
-      on: {
-        'token-d': 'state-1',
-        'token-e': 'dead-end',
-      },
-    },
-  };
-  const { transition, current } = useAutomaton(states, 'state-1');
-  const [token, setToken] = React.useState('');
+	const states = {
+		'state-1': {
+			on: {
+				'token-a': 'state-2',
+				'token-b': 'state-3',
+			},
+		},
+		'state-2': {
+			on: {
+				'token-c': 'state-3',
+			},
+		},
+		'state-3': {
+			on: {
+				'token-d': 'state-1',
+				'token-e': 'dead-end',
+			},
+		},
+	};
+	const { transition, current } = useAutomaton( states, 'state-1' );
+	const [ token, setToken ] = React.useState( '' );
 
-  return (
-    <div className="App">
-      <h1>useAutomaton</h1>
-      <div className="flex flex-col justify-start p-4">
-        <p className="mt-2">
-          Current: <code>{current}</code>
-        </p>
-        <label className="flex flex-row items-center">
-          Type the transition token
-          <input
-            type="text"
-            className="mx-2 border px-4 py-2"
-            value={token}
-            onChange={e => {
-              const {
-                target: { value },
-              } = e;
+	return (
+		<div className="App">
+			<h1>useAutomaton</h1>
+			<div className="flex flex-col justify-start p-4">
+				<p className="mt-2">
+					Current: <code>{ current }</code>
+				</p>
+				<label className="flex flex-row items-center">
+					Type the transition token
+					<input
+						type="text"
+						className="mx-2 border px-4 py-2"
+						value={ token }
+						onChange={ ( e ) => {
+							const {
+								target: { value },
+							} = e;
 
-              setToken(value);
-            }}
-          />
-          <button
-            type="button"
-            className="bg-blue-500 px-4 py-2 text-white"
-            onClick={() => {
-              transition(token);
-              setToken('');
-            }}
-          >
-            Transition
-          </button>
-        </label>
-      </div>
-    </div>
-  );
+							setToken( value );
+						} }
+					/>
+					<button
+						type="button"
+						className="bg-blue-500 px-4 py-2 text-white"
+						onClick={ () => {
+							transition( token );
+							setToken( '' );
+						} }
+					>
+						Transition
+					</button>
+				</label>
+			</div>
+		</div>
+	);
 }
 ```
