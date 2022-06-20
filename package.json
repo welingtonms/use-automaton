@@ -1,6 +1,6 @@
 {
 	"name": "@welingtonms/use-automaton",
-	"version": "0.3.1",
+	"version": "0.3.2",
 	"description": "React hook that implements the basic mechanism of an automaton.",
 	"main": "dist/index.js",
 	"module": "dist/index.js",

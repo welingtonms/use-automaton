@@ -1,3 +1,11 @@
+## [0.3.2](https://github.com/welingtonms/use-automaton/compare/v0.3.1...v0.3.2) (2022-06-20)
+
+
+### Bug Fixes
+
+* config improvements ([1a29337](https://github.com/welingtonms/use-automaton/commit/1a2933755cc9095085c35531969e548afa9c261e))
+* remove ref to generate-types ([7906c83](https://github.com/welingtonms/use-automaton/commit/7906c83f770eb332ed81005b6f9bf58761343866))
+
 ## [0.3.1](https://github.com/cheesebit/use-automaton/compare/v0.3.0...v0.3.1) (2021-10-30)
 
 
